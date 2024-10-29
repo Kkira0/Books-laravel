@@ -37,8 +37,27 @@ class BookControllere extends Controller
 
         return redirect('/books');
     }
+
+    public function edit($id){
+        $book = Book::find($id);
+        return view ('books.edit', ['book'=>$book]);
+    }
+
+    public function update(Request $request, $id){
+        $book = Book::find($id);
+        $data = [
+            'title' => $request->title,
+            'author' => $request->author,
+            'release_date' => $request->release_date
+        ];
+
+       
+        $book ->update($data);
+
+        //return view('post.index');
+        return redirect('/books');
+        
+    }
     
-
-
 
 }

@@ -10,3 +10,5 @@ Route::get('/books', [BookControllere::class, 'index']);
 Route::get('/books/create', [BookControllere::class, 'create']);
 Route::get('/books/{id}', [BookControllere::class, 'show']);
 Route::post('/books',[BookControllere::class, 'store']);
+Route::get('/books/{id}/edit', [BookControllere::class, 'edit']);
+Route::put('/books/{id}/update', [BookControllere::class, 'update']);

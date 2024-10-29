@@ -16,6 +16,7 @@
             <p>{{$book->author}}</p>
             <p>{{$book->release_date}}</p>
             <a href="/books/{{$book->id}}">Show</a>
+            <a href="/books/{{$book->id}}/edit">Edit</a>
         </li>
         @endforeach
     </ul>
