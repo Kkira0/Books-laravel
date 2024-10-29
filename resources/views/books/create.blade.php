@@ -17,8 +17,8 @@
     <input type="text" id="author" name ="author">
     <br>
 
-    <label for="dates">Date: </label>
-    <input type="date" id="dates" name ="dates">
+    <label for="release_date">Date: </label>
+    <input type="date" id="release_date" name="release_date">
     <br>
     <input type="submit" value="Submit">
 

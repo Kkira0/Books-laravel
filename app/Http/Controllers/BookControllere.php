@@ -19,16 +19,17 @@ class BookControllere extends Controller
     }
 
     public function show($id){
-        $books = Book::all();
-        returnview('books.show', ['books' => $books]); 
+        $book = Book::find($id);
+        return view('books.show', ['book' => $book]); 
     }
 
     public function store(Request $request){
+        \Log::debug($request);
         
         $data = [
             'title' => $request->title,
             'author' => $request->author,
-            'date' => $request->date
+            'release_date' => $request->release_date
         ];
 
         Book::create($data);

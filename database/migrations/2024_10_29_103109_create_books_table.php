@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('author');
-            $table->date('release_date')->nullable();;
+            $table->date('release_date');
             $table->timestamps();
         });
     }
